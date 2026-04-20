@@ -27,8 +27,8 @@ const FAQSection = () => {
     <section className="py-24 bg-slate-50 relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 md:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-heading text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">
-            Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600">Questions</span>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6 tracking-tight">
+            Frequently Asked <span className="text-slate-900 font-serif font-medium">Questions</span>
           </h2>
           <p className="text-slate-600 md:text-lg">
             Everything you need to know about joining and thriving in our student branch.
@@ -41,22 +41,22 @@ const FAQSection = () => {
             return (
               <div 
                 key={index} 
-                className={`bg-white border rounded-2xl transition-all duration-300 overflow-hidden ${isOpen ? 'border-cyan-200 shadow-md' : 'border-slate-200 hover:border-slate-300 shadow-sm'}`}
+                className={`bg-white border rounded-none transition-all duration-700 ease-in-out overflow-hidden ${isOpen ? 'border-cyan-200 shadow-md' : 'border-slate-200 hover:border-slate-300 shadow-sm'}`}
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
                 >
-                  <span className={`font-bold text-lg pr-8 transition-colors ${isOpen ? 'text-cyan-600' : 'text-slate-800'}`}>
+                  <span className={`font-bold text-lg pr-8 transition-colors ${isOpen ? 'text-slate-500' : 'text-slate-800'}`}>
                     {faq.question}
                   </span>
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${isOpen ? 'bg-cyan-100 text-cyan-600 rotate-180' : 'bg-slate-50 text-slate-400'}`}>
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-700 ease-in-out ${isOpen ? 'bg-cyan-100 text-slate-500 rotate-180' : 'bg-slate-50 text-slate-400'}`}>
                     <ChevronDown size={20} />
                   </div>
                 </button>
                 
                 <div 
-                  className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-64 pb-6 opacity-100' : 'max-h-0 opacity-0'}`}
+                  className={`px-6 overflow-hidden transition-all duration-700 ease-in-out ease-in-out ${isOpen ? 'max-h-64 pb-6 opacity-100' : 'max-h-0 opacity-0'}`}
                 >
                   <p className="text-slate-600 leading-relaxed">
                     {faq.answer}

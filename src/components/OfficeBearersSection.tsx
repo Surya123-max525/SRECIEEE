@@ -237,7 +237,7 @@ const OfficeBearersSection = () => {
   };
 
   const StatCard = ({ icon, title, value, subtitle }: { icon: ReactNode; title: string; value: number; subtitle: string }) => (
-    <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm hover:shadow-md transition-all">
+    <div className="rounded-none border border-slate-200 bg-white p-5 shadow-sm hover:shadow-md transition-all">
       <div className="flex items-start justify-between">
         <div>
           <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider">{title}</p>
@@ -256,7 +256,7 @@ const OfficeBearersSection = () => {
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="group flex flex-col bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-300"
+        className="group flex flex-col bg-white border border-slate-200 rounded-none overflow-hidden shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-700 ease-in-out"
     >
         <div className="p-4 flex items-start gap-4">
             <PersonAvatar person={person} />
@@ -283,7 +283,7 @@ const OfficeBearersSection = () => {
             <div className="flex items-center gap-1.5 text-slate-500 text-xs font-medium truncate">
             <Mail className="h-3.5 w-3.5 shrink-0" /> <span className="truncate">{person.email || `${person.name?.toLowerCase().replace(/[^a-z0-9]/g, '')}@srec.ac.in`}</span>
             </div>
-            <ChevronRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-blue-600 transition-colors shrink-0" />
+            <ChevronRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-slate-900 transition-colors shrink-0" />
         </div>
     </motion.div>
   );
@@ -322,7 +322,7 @@ const OfficeBearersSection = () => {
         </div>
 
         {/* Filters Box */}
-        <div className="rounded-xl border border-slate-200 bg-white shadow-sm p-2 mb-10 sticky top-[72px] z-30">
+        <div className="rounded-none border border-slate-200 bg-white shadow-sm p-2 mb-10 sticky top-[72px] z-30">
             <div className="flex flex-col md:flex-row gap-2">
                 <div className="relative flex-1">
                     <Search className="h-4 w-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
@@ -363,7 +363,7 @@ const OfficeBearersSection = () => {
 
         {/* Render Grouped Teams (2025 Current) */}
         {filteredBearers.length === 0 ? (
-          <div className="rounded-xl border border-dashed border-slate-300 bg-white p-16 text-center shadow-sm">
+          <div className="rounded-none border border-dashed border-slate-300 bg-white p-16 text-center shadow-sm">
             <Users className="w-10 h-10 text-slate-300 mx-auto mb-3" />
             <h3 className="text-lg font-bold text-slate-900">No personnel found</h3>
             <p className="text-sm text-slate-500 mt-1">Adjust search parameters to locate a member.</p>
@@ -409,7 +409,7 @@ const OfficeBearersSection = () => {
 
         {/* Lower Details - CURRENT Executives & Advisors */}
         <div className="grid lg:grid-cols-2 gap-6 mb-20">
-          <div className="rounded-xl border border-slate-200 bg-white p-6 md:p-8 shadow-sm">
+          <div className="rounded-none border border-slate-200 bg-white p-6 md:p-8 shadow-sm">
             <div className="flex items-center justify-between border-b border-slate-100 pb-5 mb-5">
                <div className="flex items-center gap-3">
                  <div className="w-10 h-10 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-600">
@@ -434,7 +434,7 @@ const OfficeBearersSection = () => {
                             href={m.website || m.linkedin_url || m.linkedin || m.linkedin_profile || `https://www.linkedin.com/search/results/all/?keywords=${encodeURIComponent(m.name || "")}+IEEE+SREC`}
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="hover:underline hover:text-blue-600 transition-colors"
+                            className="hover:underline hover:text-slate-900 transition-colors"
                           >
                             {m.name}
                           </a>
@@ -447,7 +447,7 @@ const OfficeBearersSection = () => {
             </div>
           </div>
 
-          <div className="rounded-xl border border-slate-200 bg-white p-6 md:p-8 shadow-sm">
+          <div className="rounded-none border border-slate-200 bg-white p-6 md:p-8 shadow-sm">
             <div className="flex items-center justify-between border-b border-slate-100 pb-5 mb-5">
                <div className="flex items-center gap-3">
                  <div className="w-10 h-10 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-600">
@@ -472,13 +472,13 @@ const OfficeBearersSection = () => {
                             href={a.website || a.linkedin_url || a.linkedin || a.linkedin_profile || `https://www.linkedin.com/search/results/all/?keywords=${encodeURIComponent(a.name || "")}+IEEE+SREC`}
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="hover:underline hover:text-blue-600 transition-colors"
+                            className="hover:underline hover:text-slate-900 transition-colors"
                           >
                             {a.name}
                           </a>
                         </p>
                         <div className="flex items-center gap-2 mt-1">
-                            <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded border border-blue-100 uppercase tracking-wider">{a.role || "Advisor"}</span>
+                            <span className="text-[10px] font-bold text-slate-900 bg-slate-100 px-2 py-0.5 rounded border border-blue-100 uppercase tracking-wider">{a.role || "Advisor"}</span>
                             {a.department && <span className="text-[11px] font-medium text-slate-500 truncate">{a.department}</span>}
                         </div>
                     </div>
@@ -514,7 +514,7 @@ const OfficeBearersSection = () => {
                             .map(role => ({ role, members: legacyGroups[role] }));
 
                         return (
-                            <div key={year} className="rounded-xl border border-slate-200 bg-white p-6 md:p-8 shadow-sm">
+                            <div key={year} className="rounded-none border border-slate-200 bg-white p-6 md:p-8 shadow-sm">
                                 <h3 className="text-lg font-bold text-slate-900 border-b border-slate-100 pb-4 mb-6 flex items-center gap-3">
                                     <History className="h-5 w-5 text-slate-400" />
                                     Archive: {year} - {year + 1}

@@ -56,7 +56,7 @@ const CollegeAboutSection = () => {
               <Building size={14} />
               <span>Our Institution</span>
             </div>
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-tight">
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-tight">
               Sri Ramakrishna <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">Engineering College</span>
             </h2>
           </div>
@@ -68,13 +68,13 @@ const CollegeAboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
           {/* Left Visual Area - Interactive Showcase */}
-          <div className="relative aspect-square md:aspect-video lg:aspect-square bg-white rounded-[2rem] md:rounded-[3rem] overflow-hidden group shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-slate-100">
+          <div className="relative aspect-square md:aspect-video lg:aspect-square bg-white rounded-none md:rounded-none overflow-hidden group shadow-sm hover:shadow-lg border border-slate-100">
             {/* Dynamic Background matching hovered item */}
             <div className="absolute inset-0 bg-white transition-colors duration-700" />
             
             {/* Display large stat or icon based on hover */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 z-10 text-slate-900">
-              <div className="relative mb-8 transform transition-transform duration-500 group-hover:scale-110">
+              <div className="relative mb-8 transform transition-transform duration-500 group-hover:scale-105">
                 <div className="absolute inset-0 bg-slate-100/80 blur-2xl rounded-full" />
                 <img src={srecLogo} alt="SREC Emblem" className="h-32 md:h-48 object-contain drop-shadow-sm relative z-10" />
               </div>
@@ -83,9 +83,9 @@ const CollegeAboutSection = () => {
                 {features.map((f) => (
                   <div 
                     key={`stat-${f.id}`}
-                    className={`absolute inset-0 flex flex-col items-center justify-center transition-all duration-500 ${hoveredFeature === f.id ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                    className={`absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 ease-in-out ${hoveredFeature === f.id ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                   >
-                    <span className={`text-transparent bg-clip-text bg-gradient-to-r ${f.color} font-black text-3xl md:text-4xl filter saturate-150`}>
+                    <span className={`text-transparent bg-clip-text bg-gradient-to-r ${f.color} font-bold tracking-tight text-3xl md:text-4xl filter saturate-150`}>
                       {f.stat}
                     </span>
                     <span className="text-slate-500 uppercase tracking-widest text-sm font-semibold mt-2">
@@ -115,20 +115,20 @@ const CollegeAboutSection = () => {
                   key={f.id}
                   onMouseEnter={() => setHoveredFeature(f.id)}
                   onClick={() => setHoveredFeature(f.id)}
-                  className={`p-6 md:p-8 rounded-3xl border transition-all duration-300 cursor-pointer group flex gap-6 ${isHovered ? 'bg-white shadow-[0_20px_40px_rgb(0,0,0,0.06)] border-slate-100 scale-[1.02] transform -translate-y-1' : 'bg-transparent border-transparent hover:bg-slate-50'}`}
+                  className={`p-6 md:p-8 rounded-none border transition-all duration-700 ease-in-out cursor-pointer group flex gap-6 ${isHovered ? 'bg-white shadow-sm hover:shadow-lg border-slate-100 scale-[1.02] transform -translate-y-1' : 'bg-transparent border-slate-200 hover:bg-slate-50'}`}
                 >
-                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 transition-colors duration-500 ${isHovered ? `bg-gradient-to-br ${f.color} text-white shadow-lg` : 'bg-slate-100 text-slate-500 group-hover:bg-slate-200'}`}>
+                  <div className={`w-14 h-14 rounded-none flex items-center justify-center shrink-0 transition-colors duration-500 ${isHovered ? `bg-gradient-to-br ${f.color} text-slate-900 shadow-lg` : 'bg-slate-100 text-slate-500 group-hover:bg-slate-200'}`}>
                     <f.icon size={26} />
                   </div>
                   <div className="flex-1">
                     <h3 className={`text-xl font-bold mb-2 transition-colors duration-300 ${isHovered ? 'text-slate-900' : 'text-slate-700'}`}>
                       {f.title}
                     </h3>
-                    <p className={`line-clamp-2 md:line-clamp-none transition-all duration-500 overflow-hidden ${isHovered ? 'text-slate-600 max-h-40 opacity-100' : 'text-slate-500 max-h-0 md:max-h-16 opacity-70 md:opacity-100'}`}>
+                    <p className={`line-clamp-2 md:line-clamp-none transition-all duration-700 ease-in-out overflow-hidden ${isHovered ? 'text-slate-600 max-h-40 opacity-100' : 'text-slate-500 max-h-0 md:max-h-16 opacity-70 md:opacity-100'}`}>
                       {f.desc}
                     </p>
                   </div>
-                  <div className={`hidden md:flex items-center justify-center opacity-0 -translate-x-4 transition-all duration-300 ${isHovered ? 'opacity-100 translate-x-0' : ''}`}>
+                  <div className={`hidden md:flex items-center justify-center opacity-0 -translate-x-4 transition-all duration-700 ease-in-out ${isHovered ? 'opacity-100 translate-x-0' : ''}`}>
                     <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center">
                       <ChevronRight className="text-slate-400" />
                     </div>

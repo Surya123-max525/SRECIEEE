@@ -14,7 +14,7 @@ const benefits = [
     desc: "Build essential skills by leading massive student initiatives.",
     icon: Target,
     colSpan: "md:col-span-1 lg:col-span-1",
-    bg: "bg-cyan-500",
+    bg: "bg-slate-1000",
     gradient: "from-cyan-300 to-cyan-500",
   },
   {
@@ -39,7 +39,7 @@ const BenefitsSection = () => {
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       {/* Decorative Backgrounds */}
-      <div className="absolute top-1/4 left-0 w-[600px] h-[600px] bg-cyan-50/50 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/4 left-0 w-[600px] h-[600px] bg-slate-100/50 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-sky-50/50 rounded-full blur-[100px] pointer-events-none translate-x-1/3 translate-y-1/3" />
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03] mix-blend-overlay pointer-events-none"></div>
 
@@ -48,20 +48,21 @@ const BenefitsSection = () => {
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           
           <div className="lg:col-span-5 text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 text-cyan-500 font-semibold text-xs tracking-widest uppercase mb-6 border border-cyan-100 shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-400 font-semibold text-xs tracking-widest uppercase mb-6 border border-cyan-100 shadow-sm">
               <Cpu size={14} className="animate-pulse" />
               <span>Why Join Us</span>
             </div>
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
               Unlock Your <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600">True Potential</span>
+              <span className="text-slate-900 font-serif font-medium">True Potential</span>
             </h2>
             <p className="text-slate-600 text-lg md:text-xl mb-8 leading-relaxed max-w-lg">
               IEEE SREC isn't just a student branch; it's a launchpad. We meticulously equip you with the technical prowess, leadership acumen, and global network required to dominate the tech landscape of tomorrow.
             </p>
-            <a href="https://www.ieee.org/membership/join/index.html" target="_blank" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-slate-900 text-white font-bold hover:bg-slate-800 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
-               Become a Member
-               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            <a href="https://www.ieee.org/membership/join/index.html" target="_blank" rel="noopener noreferrer" className="group relative inline-flex items-center justify-center gap-4 px-8 py-5 rounded-none bg-slate-900 hover:bg-[#0b3b8f] text-white font-black uppercase tracking-[0.1em] transition-all duration-500 overflow-hidden shadow-[0_10px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_30px_rgba(11,59,143,0.3)] hover:-translate-y-1 border border-slate-800 hover:border-[#0b3b8f]">
+               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-[200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
+               <span className="relative z-10 flex items-center pr-4 border-r border-white/20">Become a Member</span>
+               <ArrowRight size={20} className="relative z-10 group-hover:translate-x-2 group-hover:scale-110 transition-all duration-300" />
             </a>
           </div>
 
@@ -70,22 +71,32 @@ const BenefitsSection = () => {
               {benefits.map((b) => (
                 <div 
                   key={b.title} 
-                  className={`group relative overflow-hidden rounded-3xl p-8 md:p-10 border border-slate-100 bg-white flex flex-col justify-end min-h-[280px] hover:-translate-y-2 transition-all duration-500 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] ${b.colSpan}`}
+                  className={`group relative overflow-hidden rounded-none p-8 md:p-10 border border-slate-100 bg-white flex flex-col justify-end min-h-[280px] hover:shadow-lg transition-all duration-700 ease-in-out shadow-sm hover:shadow-sm hover:shadow-lg ${b.colSpan}`}
                 >
                   {/* Dynamic background gradient container */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${b.gradient} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-700 -z-10`} />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${b.gradient} opacity-0 group-hover:opacity-[0.05] transition-opacity duration-700 -z-10`} />
                   
                   {/* Top corner subtle styling */}
-                  <div className={`absolute -top-12 -right-12 w-40 h-40 bg-gradient-to-br ${b.gradient} rounded-full blur-[40px] opacity-10 group-hover:opacity-30 transition-opacity duration-700 pointer-events-none`} />
+                  <div className={`absolute -top-16 -right-16 w-48 h-48 bg-gradient-to-br ${b.gradient} rounded-full blur-[50px] opacity-20 group-hover:opacity-40 transition-opacity duration-700 pointer-events-none`} />
 
-                  <div className="relative z-10 mt-auto">
-                    <div className={`w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-[5deg] transition-transform duration-500 border border-slate-100 shadow-sm ${b.gradient.split(' ')[0].replace('from-', 'text-')}`}>
-                      <b.icon size={26} className="text-slate-700 group-hover:text-cyan-500 transition-colors duration-500" />
+                  <div className="relative z-10 flex flex-col h-full">
+                    <div className="flex justify-between items-start mb-12">
+                      <div className="w-16 h-16 rounded-[1.25rem] bg-white flex items-center justify-center group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500 border border-slate-200 shadow-md relative overflow-hidden">
+                        <div className={`absolute inset-0 bg-gradient-to-tr ${b.gradient} opacity-10`} />
+                        <b.icon size={28} className="text-slate-800 group-hover:text-[#0b3b8f] transition-colors duration-500 relative z-10" strokeWidth={2.5} />
+                      </div>
+                      <div className="w-10 h-10 rounded-full border border-slate-100 flex items-center justify-center text-slate-300 group-hover:border-cyan-200 group-hover:text-cyan-500 transition-colors duration-500">
+                        <ArrowRight size={16} className="-rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+                      </div>
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-800 mb-3 group-hover:text-cyan-600 transition-colors duration-500">{b.title}</h3>
-                    <p className="text-slate-500 font-medium text-sm leading-relaxed max-w-sm">
-                      {b.desc}
-                    </p>
+                    
+                    <div className="mt-auto">
+                      <div className="h-[2px] w-8 bg-slate-200 group-hover:w-16 group-hover:bg-cyan-500 transition-all duration-500 mb-6"></div>
+                      <h3 className="text-2xl font-black text-slate-800 mb-3 group-hover:text-[#0b3b8f] transition-colors duration-500">{b.title}</h3>
+                      <p className="text-slate-500 font-medium text-sm leading-relaxed max-w-sm">
+                        {b.desc}
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}

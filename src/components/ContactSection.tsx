@@ -62,7 +62,7 @@ const ContactPage = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#001a38] via-[#002a52] to-[#003764] text-white pt-28 pb-20">
+      <section className="bg-gradient-to-br from-[#001a38] via-[#002a52] to-[#003764] text-slate-900 pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -84,7 +84,7 @@ const ContactPage = () => {
           <div className="lg:col-span-5 space-y-10">
             <div className="space-y-6">
               <div className="flex gap-4">
-                <div className="w-12 h-12 bg-blue-100 text-blue-700 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-blue-100 text-blue-700 rounded-none flex items-center justify-center flex-shrink-0">
                   <MapPin size={24} />
                 </div>
                 <div>
@@ -94,7 +94,7 @@ const ContactPage = () => {
               </div>
 
               <div className="flex gap-4">
-                <div className="w-12 h-12 bg-blue-100 text-blue-700 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-blue-100 text-blue-700 rounded-none flex items-center justify-center flex-shrink-0">
                   <Phone size={24} />
                 </div>
                 <div>
@@ -104,7 +104,7 @@ const ContactPage = () => {
               </div>
 
               <div className="flex gap-4">
-                <div className="w-12 h-12 bg-blue-100 text-blue-700 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-blue-100 text-blue-700 rounded-none flex items-center justify-center flex-shrink-0">
                   <Mail size={24} />
                 </div>
                 <div>
@@ -115,7 +115,7 @@ const ContactPage = () => {
             </div>
 
             {/* Map */}
-            <div className="rounded-3xl overflow-hidden border border-slate-200 shadow-sm">
+            <div className="rounded-none overflow-hidden border border-slate-200 shadow-sm">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.150399549136!2d76.96321177573155!3d11.102166589067098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8f7000afa766b%3A0x2b5757b8d520a3af!2sSri%20Ramakrishna%20Engineering%20College!5e0!3m2!1sen!2sin!4v1776058333418!5m2!1sen!2sin"
                 width="100%"
@@ -130,7 +130,7 @@ const ContactPage = () => {
 
           {/* Contact Form */}
           <div className="lg:col-span-7">
-            <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-slate-100">
+            <div className="bg-white rounded-none shadow-xl p-8 md:p-12 border border-slate-100">
               {submitted ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
@@ -142,7 +142,7 @@ const ContactPage = () => {
                   <p className="text-slate-600 mt-3">Your message has been received. We will get back to you soon.</p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="mt-8 px-8 py-3 bg-blue-700 text-white rounded-2xl hover:bg-blue-800 transition"
+                    className="mt-8 px-8 py-3 bg-blue-700 text-slate-900 rounded-none hover:bg-blue-800 transition"
                   >
                     Send Another Message
                   </button>
@@ -158,7 +158,7 @@ const ContactPage = () => {
                         value={formData.full_name}
                         onChange={handleChange}
                         required
-                        className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-blue-600 outline-none transition"
+                        className="w-full px-5 py-4 rounded-none border border-slate-200 focus:border-blue-600 outline-none transition"
                         placeholder="Your full name"
                       />
                     </div>
@@ -170,7 +170,7 @@ const ContactPage = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-blue-600 outline-none transition"
+                        className="w-full px-5 py-4 rounded-none border border-slate-200 focus:border-blue-600 outline-none transition"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -184,7 +184,7 @@ const ContactPage = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-blue-600 outline-none transition"
+                        className="w-full px-5 py-4 rounded-none border border-slate-200 focus:border-blue-600 outline-none transition"
                         placeholder="+91 XXXXXXXXXX"
                       />
                     </div>
@@ -196,7 +196,7 @@ const ContactPage = () => {
                         value={formData.subject}
                         onChange={handleChange}
                         required
-                        className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-blue-600 outline-none transition"
+                        className="w-full px-5 py-4 rounded-none border border-slate-200 focus:border-blue-600 outline-none transition"
                         placeholder="How can we help you?"
                       />
                     </div>
@@ -210,13 +210,13 @@ const ContactPage = () => {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-5 py-4 rounded-3xl border border-slate-200 focus:border-blue-600 outline-none resize-none transition"
+                      className="w-full px-5 py-4 rounded-none border border-slate-200 focus:border-blue-600 outline-none resize-none transition"
                       placeholder="Write your message here..."
                     />
                   </div>
 
                   {error && (
-                    <p className="text-red-600 text-sm font-medium bg-red-50 p-3 rounded-xl">
+                    <p className="text-red-600 text-sm font-medium bg-red-50 p-3 rounded-none">
                       {error}
                     </p>
                   )}
@@ -224,7 +224,7 @@ const ContactPage = () => {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full py-4 bg-blue-700 hover:bg-blue-800 text-white font-semibold rounded-2xl flex items-center justify-center gap-3 transition-all active:scale-95 disabled:opacity-70"
+                    className="w-full py-4 bg-blue-700 hover:bg-blue-800 text-slate-900 font-semibold rounded-none flex items-center justify-center gap-3 transition-all active:scale-95 disabled:opacity-70"
                   >
                     {loading ? "Sending Message..." : (
                       <>

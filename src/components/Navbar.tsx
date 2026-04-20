@@ -14,6 +14,7 @@ const navLinks = [
   { label: "Awards", href: "/awards" },
   { label: "Annual Plans", href: "/annual-plans" },
   { label: "Gallery", href: "/gallery" },
+  { label: "Reports", href: "/reports" },
   { label: "Funding", href: "/funding" },
   { label: "Contact", href: "/contact" },
   { label: "VTools", href: "https://vtools.vtools.ieee.org/" },

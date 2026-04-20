@@ -36,7 +36,7 @@ const TestimonialCard = ({ item, idx }: { item: any; idx: number }) => {
 
     return (
         <div 
-            className="w-[350px] md:w-[450px] bg-white rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 shrink-0 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-300 relative mx-3"
+            className="w-[350px] md:w-[450px] bg-white rounded-none p-8 shadow-sm hover:shadow-lg border border-slate-100 shrink-0 hover:shadow-lg hover:shadow-sm hover:shadow-lg transition-all duration-700 ease-in-out relative mx-3"
         >
             <Quote className="absolute top-6 right-8 text-emerald-500/20 w-12 h-12 rotate-180" />
             
@@ -123,7 +123,7 @@ const TestimonialsMarqueeSection = () => {
           <Star size={14} className="fill-emerald-600" />
           <span>Voices of SREC</span>
         </div>
-        <h2 className="font-heading text-4xl md:text-5xl font-black text-slate-900 mb-6">
+        <h2 className="font-serif text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6">
           What Our Leadership <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">Says</span>
         </h2>
       </div>
@@ -134,7 +134,7 @@ const TestimonialsMarqueeSection = () => {
         <button 
           aria-label="Previous testimonial"
           onClick={scrollPrev}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-center hover:bg-emerald-50 hover:text-emerald-600 transition-all text-slate-400 focus:outline-none -translate-x-2 md:translate-x-4 opacity-0 group-hover:opacity-100"
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white border border-slate-200 shadow-sm hover:shadow-lg flex items-center justify-center hover:bg-emerald-50 hover:text-emerald-600 transition-all text-slate-400 focus:outline-none -translate-x-2 md:translate-x-4 opacity-0 group-hover:opacity-100"
         >
           <ChevronLeft size={24} />
         </button>
@@ -142,7 +142,7 @@ const TestimonialsMarqueeSection = () => {
         <button 
           aria-label="Next testimonial"
           onClick={scrollNext}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-center hover:bg-emerald-50 hover:text-emerald-600 transition-all text-slate-400 focus:outline-none translate-x-2 md:-translate-x-4 opacity-0 group-hover:opacity-100"
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white border border-slate-200 shadow-sm hover:shadow-lg flex items-center justify-center hover:bg-emerald-50 hover:text-emerald-600 transition-all text-slate-400 focus:outline-none translate-x-2 md:-translate-x-4 opacity-0 group-hover:opacity-100"
         >
           <ChevronRight size={24} />
         </button>

@@ -28,8 +28,8 @@ const ImpactSection = () => {
 
       <div className="max-w-[1400px] mx-auto px-4 md:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-heading text-4xl md:text-5xl font-black text-slate-900 mb-6">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600">Impact</span>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6">
+            Our <span className="text-slate-900 font-serif font-medium">Impact</span>
           </h2>
           <p className="text-slate-600 md:text-lg">
             We measure our success not just by the events we host, but by the tangible difference we make in the careers of our members and our local tech community.
@@ -39,10 +39,10 @@ const ImpactSection = () => {
         <div className="grid md:grid-cols-3 gap-8 md:gap-12 pl-0">
           {impacts.map((impact, index) => (
             <div key={index} className="flex flex-col items-center text-center group">
-              <div className="w-20 h-20 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 group-hover:-translate-y-2 group-hover:shadow-md transition-all duration-300">
-                <impact.icon size={32} className="text-cyan-500" />
+              <div className="w-20 h-20 rounded-full bg-[#fafafa] border border-slate-200 flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-md transition-all duration-700 ease-in-out">
+                <impact.icon size={32} className="text-slate-400" />
               </div>
-              <h3 className="text-4xl font-black text-slate-900 mb-2 group-hover:text-cyan-600 transition-colors">
+              <h3 className="text-4xl font-bold tracking-tight text-slate-900 mb-2 group-hover:text-slate-500 transition-colors">
                 {impact.metric}
               </h3>
               <h4 className="text-xl font-bold text-slate-800 mb-4">

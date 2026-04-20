@@ -25,15 +25,15 @@ const LatestHighlightsSection = () => {
       <div className="max-w-[1400px] mx-auto px-4 md:px-8 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-slate-100 pb-8">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 text-cyan-600 font-semibold text-xs tracking-widest uppercase mb-4 border border-cyan-100 shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-500 font-semibold text-xs tracking-widest uppercase mb-4 border border-cyan-100 shadow-sm">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-slate-1000"></span>
               </span>
               <span>Recent Highlights</span>
             </div>
-            <h2 className="font-heading text-4xl md:text-5xl font-black text-slate-900 drop-shadow-sm">
-              Discover Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600">Latest Work</span>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold tracking-tight text-slate-900 drop-shadow-sm">
+              Discover Our <span className="text-slate-900 font-serif font-medium">Latest Work</span>
             </h2>
           </div>
           <a href="/activities" className="mt-6 md:mt-0 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-50 hover:bg-slate-100 text-slate-700 font-bold text-sm transition-all shadow-sm border border-slate-200 hover:border-slate-300 group">
@@ -55,7 +55,7 @@ const LatestHighlightsSection = () => {
               return (
                 <div 
                   key={activity.id} 
-                  className={`group relative bg-white/70 backdrop-blur-lg rounded-3xl overflow-hidden border border-white shadow-[0_4px_20px_rgba(34,211,238,0.05)] hover:shadow-[0_20px_40px_rgba(34,211,238,0.15)] hover:-translate-y-2 transition-all duration-500 flex flex-col ${isFeatured ? 'lg:col-span-2 lg:flex-row' : ''}`}
+                  className={`group relative bg-white/70 backdrop-blur-lg rounded-none overflow-hidden border border-white shadow-sm hover:shadow-lg hover:shadow-sm hover:shadow-lg hover:shadow-lg transition-all duration-700 ease-in-out flex flex-col ${isFeatured ? 'lg:col-span-2 lg:flex-row' : ''}`}
                 >
                   <div className={`relative overflow-hidden shrink-0 ${isFeatured ? 'lg:w-[50%] h-64 lg:h-auto' : 'h-56'}`}>
                     <img 
@@ -66,14 +66,14 @@ const LatestHighlightsSection = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-80" />
                     
                     <div className="absolute bottom-4 left-4 right-4 flex gap-2">
-                       <span className="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-xs font-bold border border-white/20 flex items-center gap-1.5 shadow-sm">
+                       <span className="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-slate-900 text-xs font-bold border border-white/20 flex items-center gap-1.5 shadow-sm">
                          <Calendar size={12} /> {activity.date || activity.year}
                        </span>
                     </div>
                   </div>
 
                   <div className={`p-6 md:p-8 flex-1 flex flex-col justify-center ${isFeatured ? 'bg-gradient-to-br from-slate-50 to-white' : 'bg-white'}`}>
-                    <h3 className={`font-heading font-bold text-slate-800 mb-4 group-hover:text-[#00629b] transition-colors leading-tight ${isFeatured ? 'text-2xl md:text-3xl' : 'text-xl'}`}>
+                    <h3 className={`font-serif font-bold text-slate-800 mb-4 group-hover:text-[#00629b] transition-colors leading-tight ${isFeatured ? 'text-2xl md:text-3xl' : 'text-xl'}`}>
                       {activity.event}
                     </h3>
 
