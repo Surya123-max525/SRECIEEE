@@ -57,10 +57,10 @@ export default function Header() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-50 transition-all duration-[1s] ease-[0.16,1,0.3,1] shadow-2xl">
+      <nav className="fixed top-0 left-0 w-full z-50 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] shadow-2xl">
         <div className="w-full flex flex-col items-center justify-center">
           
-          <div className={`xl:hidden absolute right-4 md:right-10 flex items-center z-[70] transition-all duration-[1s] ${"$"}{hideLogos ? "top-1/2 -translate-y-1/2" : "top-5 md:top-6"}`}>
+          <div className={`xl:hidden absolute right-4 md:right-10 flex items-center z-[70] transition-all duration-1000 ${"$"}{hideLogos ? "top-1/2 -translate-y-1/2" : "top-5 md:top-6"}`}>
              <button 
                 onClick={() => setOpen(true)}
                 className="p-2 rounded-xl transition-all shadow-sm bg-white/10 backdrop-blur-md border border-white/20 text-white hover:text-white/80"
