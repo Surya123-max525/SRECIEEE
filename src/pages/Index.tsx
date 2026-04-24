@@ -11,10 +11,10 @@ import TestimonialsMarqueeSection from "@/components/TestimonialsMarqueeSection"
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import FloatingRobotAgent from "@/components/FloatingRobotAgent";
-import UpcomingMegaEvent from "@/components/UpcomingMegaEvent";
-import ResearchDomains from "@/components/ResearchDomains";
+
+
 import TechStackCarousel from "@/components/TechStackCarousel";
-import PublicationShowcase from "@/components/PublicationShowcase";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -122,11 +122,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="bg-slate-900 border-y border-slate-800">
-            <FadeInSection>
-              <UpcomingMegaEvent />
-            </FadeInSection>
-          </div>
+
 
           <div className="border-t border-slate-200 bg-white">
             <div className="py-24 md:py-32">
@@ -136,11 +132,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="border-t border-slate-200 bg-[#fafafa]">
-            <FadeInSection>
-              <ResearchDomains />
-            </FadeInSection>
-          </div>
+
 
           <div className="border-t border-slate-200 bg-[#fafafa]">
             <FadeInSection>
@@ -148,11 +140,7 @@ const Index = () => {
             </FadeInSection>
           </div>
 
-          <div>
-            <FadeInSection>
-              <PublicationShowcase />
-            </FadeInSection>
-          </div>
+
 
           <div className="border-t border-slate-200 bg-[#fafafa]">
             <div className="py-24 md:py-32">
