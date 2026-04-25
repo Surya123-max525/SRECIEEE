@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import hero1 from "@/assets/gallery/IEEE INAUGURATION/PXL_20250917_055034034.jpg";
-import hero2 from "@/assets/gallery/IEEE INAUGURATION/PXL_20250917_055307736.jpg";
-import hero3 from "@/assets/gallery/IEEE INAUGURATION/PXL_20250917_055400046.jpg";
+import hero1 from "@/assets/gallery/ieee-inauguration/PXL_20250917_055034034.jpg";
+import hero2 from "@/assets/gallery/ieee-inauguration/PXL_20250917_055307736.jpg";
+import hero3 from "@/assets/gallery/ieee-inauguration/PXL_20250917_055400046.jpg";
+
 
 const heroImages = [hero1, hero2, hero3];
 
