@@ -1,18 +1,12 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import hero1 from "@/assets/gallery/ieee-inaugurations/IMG20251015134854.jpg";
-import hero2 from "@/assets/gallery/ieee-inaugurations/IMG20251015134912.jpg";
-import hero3 from "@/assets/gallery/ieee-inaugurations/IMG20251015142051.jpg";
-
-const heroImages = [hero1, hero2, hero3];
-
 const HeroSection = () => {
    const [currentIndex, setCurrentIndex] = useState(0);
 
    useEffect(() => {
       const interval = setInterval(() => {
-         setCurrentIndex((prev) => (prev + 1) % heroImages.length);
+         setCurrentIndex((prev) => (prev + 1));
       }, 6000); // 6 seconds per slide
       return () => clearInterval(interval);
    }, []);
@@ -30,7 +24,7 @@ const HeroSection = () => {
                   exit={{ opacity: 0, filter: "blur(10px)", transition: { duration: 1.5 } }}
                   transition={{ duration: 2.5, ease: [0.16, 1, 0.3, 1] }}
                   className="absolute inset-0 w-full h-full bg-cover bg-center"
-                  style={{ backgroundImage: `url(${heroImages[currentIndex]})` }}
+                  
                />
             </AnimatePresence>
             {/* Subtle overlay for better text contrast */}
@@ -90,15 +84,6 @@ const HeroSection = () => {
                transition={{ delay: 2, duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
                className="absolute bottom-12 md:bottom-16 flex items-center justify-center space-x-4"
             >
-               {heroImages.map((_, idx) => (
-                  <button
-                     key={idx}
-                     onClick={() => setCurrentIndex(idx)}
-                     className={`transition-all duration-700 rounded-full ${idx === currentIndex ? "w-10 h-1.5 bg-white shadow-[0_0_15px_rgba(255,255,255,0.8)]" : "w-2 h-1.5 bg-white/30 hover:bg-white/60"
-                        }`}
-                     aria-label={`Go to slide ${idx + 1}`}
-                  />
-               ))}
             </motion.div>
          </div>
 
