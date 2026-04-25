@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import hero1 from "@/assets/gallery/ieee-inauguration/1.jpeg";
-import hero2 from "@/assets/gallery/ieee-inauguration/2.jpeg";
-import hero3 from "@/assets/gallery/ieee-inauguration/3.jpeg";
-import hero4 from "@/assets/gallery/ieee-inauguration/4.jpeg";
-import hero5 from "@/assets/gallery/ieee-inauguration/5.jpeg";
-import hero6 from "@/assets/gallery/ieee-inauguration/6.jpeg";
+import hero1 from "@/assets/gallery/ieee-inaugurations/IMG20251015134854.jpg";
+import hero2 from "@/assets/gallery/ieee-inaugurations/IMG20251015134912.jpg";
+import hero3 from "@/assets/gallery/ieee-inaugurations/IMG20251015142051.jpg";
 
-const heroImages = [hero1, hero2, hero3, hero4, hero5, hero6];
+const heroImages = [hero1, hero2, hero3];
 
 const HeroSection = () => {
    const [currentIndex, setCurrentIndex] = useState(0);
